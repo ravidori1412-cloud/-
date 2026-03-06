@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Noto+Serif+Hebrew:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Heebo", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif Hebrew", serif;
+  
+  --color-beige-50: #F9F7F2;
+  --color-beige-100: #F5F2ED;
+  --color-beige-200: #EBE6D9;
+  --color-sky-soft: #E0F2FE;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-beige-50 text-slate-800 antialiased;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
